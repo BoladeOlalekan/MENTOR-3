@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: hsl(0, 0%, 100%);
+    --secondary-color: hsl(0, 0%, 0%);
+    --tertiary-color: hsl(0, 0%, 55%);
+    --optional-color: hsl(0, 0%, 41%);
+}
+
+.hero{
+    background: url(/images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+
+    p{
+        border: 3px solid var(--primary-color);
+        color: var(--primary-color);
+        margin: auto 2rem;
+        font-size: 2.5rem;
+        padding: 1.5rem;
+        font-family: Josefin Sans, 'sans-serif';
+        font-weight: 300;
+        position: relative;
+        top: 10rem;
+        overflow: hidden;
+    
+        span{
+            display: block;
+        }
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        margin: 2rem;
+    }
+
+    .open-menu-btn{
+        margin: 2rem;
+        cursor: pointer;
+
+        .nav-menu-btn{
+            background: var(--primary-color);
+            margin-bottom: 5px;
+            height: 4px;
+            width: 35px;
+            border-radius: .1rem;
+        }
+    }
+}
+
+nav{
+    transform: translateY(-100%);
+    position: fixed;
+    height: 100vh;
+    background: var(--secondary-color);
+    width: 100%;
+    z-index: 999;
+    transition: .3s ease-in-out;
+
+    .head{
+        display: flex;
+        justify-content: space-between;
+
+        .close-menu-btn{
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            position: relative;
+            top: -4px;
+        }
+    }
+
+    ul{
+        margin: 5rem auto auto 1rem;
+
+        li{
+            padding: 1rem;
+            transition: .5s;
+            margin-right: 1rem;
+
+            a{
+                color: var(--tertiary-color);
+                font-size: 1.5rem;
+                font-family: Josefin Sans, "sans-serif";
+                font-weight: 300;
+
+                &:hover{
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    transition: .3s;
+                }
+            }
+
+            &:hover{
+                box-shadow: -1px -1px 3px  rgba($color: #000000, $alpha: .2),
+                    1px 1px 3px  rgba($color: #ffffff, $alpha: .4),
+                    inset 0px -1px 3px  rgba($color: #000000, $alpha: .2),
+                    inset 1px 1px 3px  rgba($color: #ffffff, $alpha: .4);
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+    }
+}
+
+.interactive{
+    margin: 6rem 2rem 4rem 2rem;
+
+    img{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 2rem;
+        font-family: Josefin Sans, 'sans-serif';
+        font-weight: 300;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    p{
+        font-size: 18px;
+        color: var(--tertiary-color);
+        text-align: center;
+        font-family: Alata, 'sans-serif';
+        font-weight: 400;
+        line-height: 32px;
+    }
+}
+
+.creations{
+    margin: 4rem 2rem 4rem 2rem;
+
+    .create{
+        font-size: 2rem;
+        font-family: Josefin Sans, 'sans-serif';
+        font-weight: 300;
+        text-align: center;
+        margin: 3rem auto;
+    }
+
+    .creation-img{
+        .image{
+            position: relative;
+
+            img{
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+                filter: brightness(80%);
+
+                &:hover{
+                    box-shadow: 5px 5px 20px 1px rgba($color: #000000, $alpha: .5);
+                }
+            }
+
+            h2{
+                position: absolute;
+                top: 25%;
+                color: var(--primary-color);
+                padding: 10px;
+                font-size: 2rem;
+                font-family: Josefin Sans, 'sans-serif';
+                font-weight: 300;
+                z-index: 999;
+
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .see-link{
+        text-align: center;
+        
+        a{
+            border: 2px solid var(--secondary-color);
+            background: transparent;
+            padding: .8rem 4rem;
+            font-size: 18px;
+            font-family: Josefin Sans, 'sans-serif';
+            font-weight: bolder;
+            color: var(--secondary-color);
+            display: inline-block;
+            letter-spacing: 3px;
+
+            &:hover{
+                color: var(--primary-color);
+                background: var(--secondary-color);
+                transition: .5s;
+            }
+        }
+    }
+}
+
+.footer-page{
+    background: var(--secondary-color);
+
+    footer{
+        text-align: center;
+    }
+
+    .primary{
+        padding: 2rem;
+
+        img{
+            margin-bottom: 1rem;
+        }
+
+        .links{
+            a{
+                display: block;
+                color: var(--primary-color);
+                font-size: 18px;
+                padding: 1.5rem;
+                font-family: Alata, sans-serif;
+                font-weight: 400;
+
+                &:hover{
+                    color: var(--tertiary-color);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    .secondary{
+        padding: 1rem;
+
+        .social-links{
+            display: flex;
+            justify-content: center;
+
+            img{
+                padding-right: 1rem;
+
+                &:hover{
+                    width: 32px;
+                    transition: .5s;
+                }
+            }
+        }
+
+        p{
+            color: var(--optional-color);
+            font-family: Alata, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 1rem;
+        }
+    }
+
+    .attribution{
+        background: var(--optional-color);
+        color: var(--primary-color);
+        padding: 1rem;
+        font-family: Alata, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+
+        a{
+            color: var(--secondary-color);
+
+            &:hover{
+                color: #223455;
+                transition: .3s;
+            }
+        }
+    }
+}
