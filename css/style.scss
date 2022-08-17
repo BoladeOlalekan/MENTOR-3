@@ -173,7 +173,7 @@ nav{
                 font-size: 2rem;
                 font-family: Josefin Sans, 'sans-serif';
                 font-weight: 300;
-                z-index: 999;
+                z-index: 1;
 
                 span{
                     display: block;
@@ -279,4 +279,8 @@ nav{
             }
         }
     }
+}
+
+.show-nav{
+    transform: translateY(-0%);
 }

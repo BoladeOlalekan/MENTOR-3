@@ -151,7 +151,7 @@ nav ul li:hover {
   font-size: 2rem;
   font-family: Josefin Sans, "sans-serif";
   font-weight: 300;
-  z-index: 999;
+  z-index: 1;
 }
 .creations .creation-img .image h2 span {
   display: block;
@@ -235,4 +235,8 @@ nav ul li:hover {
 .footer-page .attribution a:hover {
   color: #223455;
   transition: 0.3s;
+}
+
+.show-nav {
+  transform: translateY(0%);
 }/*# sourceMappingURL=style.css.map */
