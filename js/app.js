@@ -8,4 +8,5 @@ openBtn.addEventListener('click' , () => {
 
 closeBtn.addEventListener('click' , () => {
     nav.classList.remove('show-nav');
+    nav.classList.toggle('toggle-rotate')
 })

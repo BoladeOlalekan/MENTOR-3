@@ -12,6 +12,14 @@
   --optional-color: hsl(0, 0%, 41%);
 }
 
+.desktop {
+  display: none;
+}
+
+.see-link-top {
+  display: none;
+}
+
 .hero {
   background: url(/images/mobile/image-hero.jpg);
   background-position: center;
@@ -55,7 +63,7 @@ header .open-menu-btn .nav-menu-btn {
 }
 
 nav {
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   position: fixed;
   height: 100vh;
   background: var(--secondary-color);
@@ -83,14 +91,14 @@ nav ul li {
   margin-right: 1rem;
 }
 nav ul li a {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
   font-size: 1.5rem;
-  font-family: Josefin Sans, "sans-serif";
-  font-weight: 300;
+  font-family: Alata, "sans-serif";
+  font-weight: 400;
+  text-transform: uppercase;
 }
 nav ul li a:hover {
-  font-weight: 700;
-  color: var(--primary-color);
+  font-weight: 600;
   transition: 0.3s;
 }
 nav ul li:hover {
@@ -106,11 +114,14 @@ nav ul li:hover {
   width: 100%;
 }
 .interactive h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: Josefin Sans, "sans-serif";
   font-weight: 300;
   text-align: center;
   margin: 2rem auto;
+}
+.interactive h2 span {
+  display: block;
 }
 .interactive p {
   font-size: 18px;
@@ -133,15 +144,13 @@ nav ul li:hover {
 }
 .creations .creation-img .image {
   position: relative;
+  cursor: pointer;
 }
 .creations .creation-img .image img {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
   filter: brightness(80%);
-}
-.creations .creation-img .image img:hover {
-  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 .creations .creation-img .image h2 {
   position: absolute;
@@ -155,6 +164,9 @@ nav ul li:hover {
 }
 .creations .creation-img .image h2 span {
   display: block;
+}
+.creations .creation-img .image:hover img {
+  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 .creations .see-link {
   text-align: center;
@@ -239,4 +251,203 @@ nav ul li:hover {
 
 .show-nav {
   transform: translateY(0%);
+}
+
+.toggle-rotate .close-menu-btn {
+  transform: rotate(180deg);
+  transition: 0.1s;
+}
+
+@media only screen and (min-width: 712px) {
+  .hero p {
+    top: 15rem;
+  }
+  .creations .creation-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 912px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    width: 100%;
+  }
+  .see-link {
+    display: none;
+  }
+  .hero {
+    background: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(95%);
+  }
+  .hero .Logo {
+    margin: 4rem auto auto 7.5rem;
+  }
+  .hero p {
+    margin-left: 7.5rem;
+    width: 45%;
+    font-size: 3.5rem;
+  }
+  .hero p .deliver {
+    display: inline-flex;
+  }
+  .open-menu-btn {
+    display: none;
+  }
+  nav {
+    transform: translateY(0%);
+    position: unset;
+    display: block;
+    height: auto;
+    background: none;
+    width: 100%;
+    z-index: 999;
+    transition: unset;
+  }
+  nav .head {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    position: absolute;
+    right: 4rem;
+    bottom: -0.6rem;
+    margin-top: 0;
+  }
+  nav ul li {
+    margin-right: 10px;
+    padding: 1rem;
+  }
+  nav ul li a {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--primary-color);
+    position: relative;
+  }
+  nav ul li a:hover {
+    font-weight: 400;
+  }
+  nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 28px;
+    border-radius: 0.3rem;
+    margin-left: -2.6rem;
+    transition: 0.3s;
+  }
+  nav ul li:hover {
+    box-shadow: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+  .interactive {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .interactive img {
+    margin-left: 3rem;
+    box-shadow: -2px 2px 5px var(--tertiary-color);
+  }
+  .interactive .interactive-text {
+    background: var(--primary-color);
+    z-index: 1;
+    position: relative;
+    left: -4rem;
+    top: 11rem;
+    margin-bottom: 9rem;
+    margin-right: auto;
+    padding: 3rem;
+    box-shadow: 2px 2px 5px var(--tertiary-color);
+  }
+  .interactive .interactive-text h2 {
+    text-align: left;
+  }
+  .interactive .interactive-text h2 span {
+    display: block;
+  }
+  .interactive .interactive-text p {
+    text-align: left;
+  }
+  .creations {
+    margin-top: 5rem;
+  }
+  .creations .create-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .creations .create-head .create {
+    margin-left: 0;
+  }
+  .creations .create-head .see-link-top {
+    display: block;
+    border: 2px solid var(--secondary-color);
+    background: transparent;
+    padding: 0.8rem 3rem;
+    font-size: 18px;
+    font-family: Josefin Sans, "sans-serif";
+    font-weight: bolder;
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+    margin: auto 0 3rem auto;
+  }
+  .creations .create-head .see-link-top:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    transition: 0.5s;
+  }
+  .creations .creation-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .creations .creation-img .image h2 {
+    position: absolute;
+    top: 65%;
+  }
+  .creations .creation-img .image:hover h2 {
+    color: var(--secondary-color);
+    transition: 0.3s;
+  }
+  .creations .creation-img .image:hover img {
+    filter: opacity(0.45);
+    transition: 0.3s;
+  }
+  .footer-page footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-page footer .primary {
+    text-align: left;
+  }
+  .footer-page footer .primary img {
+    padding-left: 1.5rem;
+  }
+  .footer-page footer .primary .links {
+    display: flex;
+    margin-left: 0;
+  }
+  .footer-page footer .secondary {
+    padding: 32px;
+  }
+  .footer-page footer .secondary .social-links {
+    justify-content: right;
+    margin-bottom: 1rem;
+  }
+  .footer-page footer .secondary p {
+    padding-top: 1.9rem;
+    text-align: right;
+  }
+  .footer-page .attribution {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
